@@ -1,26 +1,24 @@
-//
-//  ContentView.swift
-//  FileList
-//
-//  Created by Bas van der Hoek on 10/07/2023.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+  var url: URL
+  
+  var body: some View {
+    VStack {
+      Text ( "Favorites" )
+      List {
+        Text("Work")
+        Text("Personal")
+        Text("Home")
+      }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+      NavigationView {
+        ContentView(url: URL(string: "path/to/Notes")!)
+      }
     }
 }

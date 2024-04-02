@@ -11,7 +11,7 @@ import SwiftUI
 struct FileListApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(url: URL(string: "path/to/Notes")!)
         }
     }
 }
